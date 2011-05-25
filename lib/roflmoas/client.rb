@@ -50,9 +50,9 @@ module RoflmOAS
 
       case error.attribute("errorCode").value.to_i
         when 545
-          raise RoflmOAS::NotFoundError.new
+          raise RoflmOAS::NotFoundError.new error.first.content
         else
-          raise RoflmOAS::OASError
+          raise RoflmOAS::OASError.new error.first.content
         end
     end
   end
