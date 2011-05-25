@@ -1,5 +1,7 @@
 require 'active_support/core_ext/module/attribute_accessors'
 require 'active_support/core_ext/hash/reverse_merge'
+require 'savon'
+require 'roflmoas/errors'
 
 module RoflmOAS
   autoload :Client, "roflmoas/client"

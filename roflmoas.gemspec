@@ -20,5 +20,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency "savon", "~> 0.9.2"
+  s.add_dependency "nokogiri", "~> 1.4.4"
   s.add_dependency "activesupport", "~> 3.0.0"
 end
