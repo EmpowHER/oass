@@ -95,7 +95,7 @@ describe RoflmOAS::Client do
   end
 
   describe "#create_campaign" do
-    use_vcr_cassette "campaign_creation", :record => :all, :match_requests_on => [:uri, :method, :body]
+    use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method, :body]
 
     let(:client) { RoflmOAS::Client.new }
 
