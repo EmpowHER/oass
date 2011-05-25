@@ -1,0 +1,23 @@
+# -*- encoding: utf-8 -*-
+$:.push File.expand_path("../lib", __FILE__)
+require "roflmoas/version"
+
+Gem::Specification.new do |s|
+  s.name        = "roflmoas"
+  s.version     = Roflmoas::VERSION
+  s.platform    = Gem::Platform::RUBY
+  s.authors     = ["Rodrigo Navarro"]
+  s.email       = ["navarro@manapot.com.br"]
+  s.homepage    = ""
+  s.summary     = %q{Funny API to access OAS hellish soap interface}
+  s.description = %q{Help you to communicate with the corporate advertisers world!}
+
+  s.rubyforge_project = "roflmoas"
+
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.require_paths = ["lib"]
+
+  s.add_dependency "savon", "~> 0.9.2"
+end
