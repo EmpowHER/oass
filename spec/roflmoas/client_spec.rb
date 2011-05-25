@@ -117,4 +117,45 @@ describe RoflmOAS::Client do
       its(:content) { "Successfully added." }
     end
   end
+
+  describe "#create_criative" do
+    use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method, :body]
+
+    let(:client) { RoflmOAS::Client.new }
+
+    context "with valid attributes" do
+      let(:attributes) do
+        {
+          :campaign_id => "random_id_lolwut",
+          :id => "I_am_so_creative_lol",
+          :name => "A nice name indeed",
+          :description => "Blabla",
+          :click_url => "http://lolwut.com",
+          :positions => %w(TopLeft BottomLeft),
+          :creative_types_id => "unknow_type",
+          :redirect_url => "http://lolwut.com",
+          :display => "Y",
+          :height => "30",
+          :width => "30",
+          :target_window => "targetwindow",
+          :alt_text => "Oh hai!",
+          :discount_impressions => "N",
+          :start_date => "1986-03-31",
+          :end_date => "2040-03-31",
+          :weight => "79",
+          :expire_immediately => "N",
+          :no_cache => "N",
+          :extra_html => "<b></b>",
+          :extra_text => "kthxbai",
+          :browser_versions => %w(explorer6 netscape7),
+          :sequence_number => "4"
+        }
+
+      end
+
+      subject { client.create_creative attributes }
+
+      its(:content) { "Successfully added." }
+    end
+  end
 end
