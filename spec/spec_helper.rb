@@ -1,4 +1,4 @@
-require 'roflmoas'
+require 'oass'
 require 'vcr'
 
 VCR.config do |config|

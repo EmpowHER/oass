@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "roflmoas/version"
+require "oass/version"
 
 Gem::Specification.new do |s|
-  s.name        = "roflmoas"
-  s.version     = RoflmOAS::VERSION
+  s.name        = "oass"
+  s.version     = Oass::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Rodrigo Navarro"]
   s.email       = ["navarro@manapot.com.br"]
@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Funny API to access OAS hellish soap interface}
   s.description = %q{Help you to communicate with the corporate advertisers world!}
 
-  s.rubyforge_project = "roflmoas"
+  s.rubyforge_project = "oass"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

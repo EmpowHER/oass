@@ -1,15 +1,15 @@
 require "spec_helper"
 
-describe RoflmOAS::Client do
+describe Oass::Client do
   context "configuration" do
     [:endpoint, :account, :username, :password].each do |setting|
       context "on initialization" do
-        subject { RoflmOAS::Client.new setting => "WUT" }
+        subject { Oass::Client.new setting => "WUT" }
         its(setting) { should == "WUT" }
       end
 
       context "after initialization" do
-        subject { RoflmOAS::Client.new }
+        subject { Oass::Client.new }
         before { subject.send("#{setting}=", "WUT") }
         its(setting) { should == "WUT" }
       end
@@ -19,7 +19,7 @@ describe RoflmOAS::Client do
   describe "#request" do
     use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method, :body]
 
-    let(:client) { RoflmOAS::Client.new }
+    let(:client) { Oass::Client.new }
 
     context "successfully" do
       subject do
@@ -43,7 +43,7 @@ describe RoflmOAS::Client do
               xml.Overview { xml.Id "invalid_id_lol" }
             end
           end
-        }.to raise_error(RoflmOAS::OASError)
+        }.to raise_error(Oass::OASError)
       end
     end
   end
@@ -51,7 +51,7 @@ describe RoflmOAS::Client do
   describe "#read_campaign" do
     use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method, :body]
 
-    let(:client) { RoflmOAS::Client.new }
+    let(:client) { Oass::Client.new }
 
     context "with a valid id" do
       subject { client.read_campaign("abx_oferta3") }
@@ -63,7 +63,7 @@ describe RoflmOAS::Client do
 
     context "with an invalid id" do
       it "raises a NotFoundError" do
-        expect { client.read_campaign("LOLWUT").to raise_error(RoflmOAS::NotFoundError) }
+        expect { client.read_campaign("LOLWUT").to raise_error(Oass::NotFoundError) }
       end
     end
   end
@@ -71,7 +71,7 @@ describe RoflmOAS::Client do
   describe "#read_creative" do
     use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method, :body]
 
-    let(:client) { RoflmOAS::Client.new }
+    let(:client) { Oass::Client.new }
 
     context "with a valid id" do
       subject { client.read_creative("abx_oferta3", "creatiewut") }
@@ -83,13 +83,13 @@ describe RoflmOAS::Client do
 
     context "with an invalid id" do
       it "raises a NotFoundError" do
-        expect { client.read_creative("abx_oferta3", "LOLWUT").to raise_error(RoflmOAS::NotFoundError) }
+        expect { client.read_creative("abx_oferta3", "LOLWUT").to raise_error(Oass::NotFoundError) }
       end
     end
 
     context "with an invalid campaign id" do
       it "raises a NotFoundError" do
-        expect { client.read_creative("LOLWUT", "creatiewut").to raise_error(RoflmOAS::NotFoundError) }
+        expect { client.read_creative("LOLWUT", "creatiewut").to raise_error(Oass::NotFoundError) }
       end
     end
   end
@@ -97,7 +97,7 @@ describe RoflmOAS::Client do
   describe "#create_campaign" do
     use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method, :body]
 
-    let(:client) { RoflmOAS::Client.new }
+    let(:client) { Oass::Client.new }
 
     context "with the required attributes" do
       let(:attributes) do
@@ -121,7 +121,7 @@ describe RoflmOAS::Client do
   describe "#create_criative" do
     use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method, :body]
 
-    let(:client) { RoflmOAS::Client.new }
+    let(:client) { Oass::Client.new }
 
     context "with valid attributes" do
       let(:attributes) do

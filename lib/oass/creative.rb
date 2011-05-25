@@ -1,4 +1,4 @@
-module RoflmOAS
+module Oass
   module Creative
     def read_creative(campaign_id, id)
       request "Creative" do |xml|

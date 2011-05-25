@@ -1,12 +1,12 @@
 require 'active_support/core_ext/module/attribute_accessors'
 require 'active_support/core_ext/hash/reverse_merge'
 require 'savon'
-require 'roflmoas/errors'
+require 'oass/errors'
 
-module RoflmOAS
-  autoload :Client, "roflmoas/client"
-  autoload :Campaign, "roflmoas/campaign"
-  autoload :Creative, "roflmoas/creative"
+module Oass
+  autoload :Client, "oass/client"
+  autoload :Campaign, "oass/campaign"
+  autoload :Creative, "oass/creative"
 
   mattr_accessor :endpoint
   @@endpoint = "https://training7.247realmedia.com//oasapi/OaxApi?wsdl"
@@ -14,7 +14,9 @@ module RoflmOAS
   mattr_accessor :account
   @@account = "OasDefault"
 
-  mattr_accessor :username, :password
+  mattr_accessor :username
+
+  mattr_accessor :password
 
   def configure
     yield self

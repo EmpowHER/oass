@@ -1,4 +1,4 @@
-module RoflmOAS
+module Oass
   module Campaign
     def read_campaign(id)
       request "Campaign" do |xml|

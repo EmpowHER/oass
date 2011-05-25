@@ -1,4 +1,4 @@
-module RoflmOAS
+module Oass
   class Client
     attr_accessor :endpoint, :account, :username, :password
 
@@ -6,10 +6,10 @@ module RoflmOAS
     include Creative
 
     def initialize(options = {})
-      options.reverse_merge! :endpoint => RoflmOAS.endpoint,
-                             :account  => RoflmOAS.account,
-                             :username => RoflmOAS.username,
-                             :password => RoflmOAS.password
+      options.reverse_merge! :endpoint => Oass.endpoint,
+                             :account  => Oass.account,
+                             :username => Oass.username,
+                             :password => Oass.password
 
       options.each_pair do |key, value|
         send "#{key}=", value
@@ -50,9 +50,9 @@ module RoflmOAS
 
       case error.attribute("errorCode").value.to_i
         when 545
-          raise RoflmOAS::NotFoundError.new error.first.content
+          raise Oass::NotFoundError.new error.first.content
         else
-          raise RoflmOAS::OASError.new error.first.content
+          raise Oass::OASError.new error.first.content
         end
     end
   end
