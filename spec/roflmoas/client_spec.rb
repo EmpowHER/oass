@@ -67,4 +67,30 @@ describe RoflmOAS::Client do
       end
     end
   end
+
+  describe "#read_creative" do
+    use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method, :body]
+
+    let(:client) { RoflmOAS::Client.new }
+
+    context "with a valid id" do
+      subject { client.read_creative("abx_oferta3", "creatiewut") }
+
+      it "finds the right creative" do
+        subject.css("Id").first.content.should == "creatiewut"
+      end
+    end
+
+    context "with an invalid id" do
+      it "raises a NotFoundError" do
+        expect { client.read_creative("abx_oferta3", "LOLWUT").to raise_error(RoflmOAS::NotFoundError) }
+      end
+    end
+
+    context "with an invalid campaign id" do
+      it "raises a NotFoundError" do
+        expect { client.read_creative("LOLWUT", "creatiewut").to raise_error(RoflmOAS::NotFoundError) }
+      end
+    end
+  end
 end

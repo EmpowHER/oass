@@ -3,6 +3,7 @@ module RoflmOAS
     attr_accessor :endpoint, :account, :username, :password
 
     include Campaign
+    include Creative
 
     def initialize(options = {})
       options.reverse_merge! :endpoint => RoflmOAS.endpoint,

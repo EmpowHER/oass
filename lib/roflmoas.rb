@@ -6,6 +6,7 @@ require 'roflmoas/errors'
 module RoflmOAS
   autoload :Client, "roflmoas/client"
   autoload :Campaign, "roflmoas/campaign"
+  autoload :Creative, "roflmoas/creative"
 
   mattr_accessor :endpoint
   @@endpoint = "https://training7.247realmedia.com//oasapi/OaxApi?wsdl"

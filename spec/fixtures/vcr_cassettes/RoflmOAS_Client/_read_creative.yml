@@ -1,0 +1,160 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      content-type: 
+      - text/xml
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      date: 
+      - Wed, 25 May 2011 15:57:25 GMT
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Creative&quot;&gt;
+          &lt;Creative action=&quot;read&quot;&gt;
+            &lt;CampaignId&gt;abx_oferta3&lt;/CampaignId&gt;
+            &lt;Id&gt;creatiewut&lt;/Id&gt;
+          &lt;/Creative&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      content-type: 
+      - text/xml;charset=UTF-8
+      soapaction: 
+      - "\"OasXmlRequest\""
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml;charset=UTF-8
+      via: 
+      - 1.1 training7.247realmedia.com
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Wed, 25 May 2011 15:57:26 GMT
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      
+      &lt;Response>
+        &lt;Creative>
+          &lt;CampaignId>abx_oferta3&lt;/CampaignId>
+          &lt;Id>creatiewut&lt;/Id>
+          &lt;Name>creatiewut&lt;/Name>
+          &lt;Description/>
+          &lt;ClickUrl>test&lt;/ClickUrl>
+          &lt;Positions>
+            &lt;Position>x05&lt;/Position>
+          &lt;/Positions>
+          &lt;CreativeTypesId>unknown_type&lt;/CreativeTypesId>
+          &lt;Display>Y&lt;/Display>
+          &lt;Height/>
+          &lt;Width/>
+          &lt;TargetWindow/>
+          &lt;AltText/>
+          &lt;DiscountImpressions>N&lt;/DiscountImpressions>
+          &lt;StartDate/>
+          &lt;StartTime>&lt;/StartTime>
+          &lt;EndDate/>
+          &lt;EndTime>&lt;/EndTime>
+          &lt;Weight>10&lt;/Weight>
+          &lt;ExpireImmediately>N&lt;/ExpireImmediately>
+          &lt;NoCache>N&lt;/NoCache>
+          &lt;ExtraHTML/>
+          &lt;ExtraText/>
+          &lt;RichMediaCpm>0.0&lt;/RichMediaCpm>
+          &lt;BrowserV/>
+          &lt;SequenceNo/>
+          &lt;CountOnDownload>N&lt;/CountOnDownload>
+          &lt;WhoCreated>interface_abril&lt;/WhoCreated>
+          &lt;WhenCreated>2011-05-25 11:54:39&lt;/WhenCreated>
+          &lt;WhoModified>&lt;/WhoModified>
+          &lt;WhenModified>&lt;/WhenModified>
+        &lt;/Creative>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
