@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe RoflmOAS::Client do
   context "configuration" do
@@ -91,6 +91,30 @@ describe RoflmOAS::Client do
       it "raises a NotFoundError" do
         expect { client.read_creative("LOLWUT", "creatiewut").to raise_error(RoflmOAS::NotFoundError) }
       end
+    end
+  end
+
+  describe "#create_campaign" do
+    use_vcr_cassette "campaign_creation", :record => :all, :match_requests_on => [:uri, :method, :body]
+
+    let(:client) { RoflmOAS::Client.new }
+
+    context "with the required attributes" do
+      let(:attributes) do
+        {
+          :id => "random_id_lolwut_wtf",
+          :name => "LOLWUT",
+          :advertiser_id => "bobo",
+          :agency_id => "unknown_agency",
+          :name => "LOLWUT",
+          :campaign_manager => "lol",
+          :product_id => "default-product",
+        }
+      end
+
+      subject { client.create_campaign attributes }
+
+      its(:content) { "Successfully added." }
     end
   end
 end
