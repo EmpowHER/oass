@@ -2,6 +2,8 @@ module RoflmOAS
   class Client
     attr_accessor :endpoint, :account, :username, :password
 
+    include Campaign
+
     def initialize(options = {})
       options.reverse_merge! :endpoint => RoflmOAS.endpoint,
                              :account  => RoflmOAS.account,

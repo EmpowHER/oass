@@ -47,4 +47,24 @@ describe RoflmOAS::Client do
       end
     end
   end
+
+  describe "#read_campaign" do
+    use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method, :body]
+
+    let(:client) { RoflmOAS::Client.new }
+
+    context "with a valid id" do
+      subject { client.read_campaign("abx_oferta3") }
+
+      it "finds the right campaign" do
+        subject.css("Id").first.content.should == "abx_oferta3"
+      end
+    end
+
+    context "with an invalid id" do
+      it "raises a NotFoundError" do
+        expect { client.read_campaign("LOLWUT").to raise_error(RoflmOAS::NotFoundError) }
+      end
+    end
+  end
 end
