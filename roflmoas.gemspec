@@ -4,7 +4,7 @@ require "roflmoas/version"
 
 Gem::Specification.new do |s|
   s.name        = "roflmoas"
-  s.version     = Roflmoas::VERSION
+  s.version     = RoflmOAS::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Rodrigo Navarro"]
   s.email       = ["navarro@manapot.com.br"]
@@ -20,4 +20,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency "savon", "~> 0.9.2"
+  s.add_dependency "activesupport", "~> 3.0.0"
 end
