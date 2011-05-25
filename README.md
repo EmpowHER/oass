@@ -1,13 +1,13 @@
-# Lets ROFL!
-RoflOAS is a library to help you to interact with OAS and their strange soap API.
+# O_ass_
+Oass is a library to help you to interact with OAS and its bizarre soap API.
 
 ## Installation
-    gem install roflmoas
+    gem install oass
 
 ## Configuration
-Add global configurations directly to the RoflmOAS module:
+Add global configurations directly to the Oass module:
 
-    RoflmOAS.configure do |config|
+    Oass.configure do |config|
       config.endpoint = "The wsdl endpoint"
       config.account  = "Your OAS account"
       config.username = "LOL"
@@ -16,10 +16,10 @@ Add global configurations directly to the RoflmOAS module:
 
 You can override any settings when you instantiate a new client
 
-    client = RoflmOAS::Client.new :username => "Other", :password => "Secret"
+    client = Oass::Client.new :username => "Other", :password => "Secret"
 
 ## Usage
-    client = RoflmOAS::Client.new
+    client = Oass::Client.new
     campaign = client.read_campaign("campaign_id")
 
 You can also make requests that are not yet natively implemented
