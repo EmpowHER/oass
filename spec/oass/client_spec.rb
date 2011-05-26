@@ -114,7 +114,7 @@ describe Oass::Client do
 
       subject { client.create_campaign attributes }
 
-      its(:content) { "Successfully added." }
+      its(:content) { should == "Successfully added." }
     end
   end
 
@@ -127,7 +127,7 @@ describe Oass::Client do
       let(:attributes) do
         {
           :campaign_id => "random_id_lolwut",
-          :id => "I_am_so_creative_lol",
+          :id => "I_am_so_creative_lolwut",
           :name => "A nice name indeed",
           :description => "Blabla",
           :click_url => "http://lolwut.com",
@@ -154,7 +154,7 @@ describe Oass::Client do
 
       subject { client.create_creative attributes }
 
-      its(:content) { "Successfully added." }
+      its(:content) { should == "Successfully added." }
     end
 
     context "with a creative file" do

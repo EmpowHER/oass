@@ -1165,3 +1165,1407 @@
       </definitions>
 
     http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml
+      date: 
+      - Thu, 26 May 2011 00:19:11 GMT
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      content-type: 
+      - text/xml
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      date: 
+      - Thu, 26 May 2011 00:19:12 GMT
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml
+      date: 
+      - Thu, 26 May 2011 00:46:55 GMT
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      content-type: 
+      - text/xml
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      date: 
+      - Thu, 26 May 2011 00:46:57 GMT
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml
+      date: 
+      - Thu, 26 May 2011 00:47:50 GMT
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      content-type: 
+      - text/xml
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      date: 
+      - Thu, 26 May 2011 00:47:51 GMT
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml
+      date: 
+      - Thu, 26 May 2011 00:48:36 GMT
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      content-type: 
+      - text/xml
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      date: 
+      - Thu, 26 May 2011 00:48:37 GMT
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml
+      date: 
+      - Thu, 26 May 2011 00:48:54 GMT
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      content-type: 
+      - text/xml
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      date: 
+      - Thu, 26 May 2011 00:48:55 GMT
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml
+      date: 
+      - Thu, 26 May 2011 00:49:33 GMT
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      content-type: 
+      - text/xml
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      date: 
+      - Thu, 26 May 2011 00:49:34 GMT
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml
+      date: 
+      - Thu, 26 May 2011 00:55:00 GMT
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      content-type: 
+      - text/xml
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      date: 
+      - Thu, 26 May 2011 00:55:01 GMT
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml
+      date: 
+      - Thu, 26 May 2011 00:56:55 GMT
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      content-type: 
+      - text/xml
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      date: 
+      - Thu, 26 May 2011 00:56:58 GMT
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml
+      date: 
+      - Thu, 26 May 2011 00:57:39 GMT
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      etag: 
+      - "\"44e617-674-48c8d0448cd40\""
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      last-modified: 
+      - Thu, 29 Jul 2010 20:59:57 GMT
+      content-type: 
+      - text/xml
+      server: 
+      - Apache/2.2.3 (Red Hat)
+      date: 
+      - Thu, 26 May 2011 00:57:40 GMT
+      content-length: 
+      - "1652"
+      accept-ranges: 
+      - bytes
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <definitions name="OaxApiService" targetNamespace="http://api.oas.tfsm.com/" xmlns:tns="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <types>
+        </types>
+        <message name="OaxApi_OasXmlRequestResponse">
+          <part name="result" type="xsd:string">
+          </part>
+        </message>
+        <message name="OaxApi_OasXmlRequest">
+          <part name="String_1" type="xsd:string">
+      
+          </part>
+          <part name="String_2" type="xsd:string">
+          </part>
+          <part name="String_3" type="xsd:string">
+          </part>
+          <part name="String_4" type="xsd:string">
+          </part>
+        </message>
+        <portType name="OaxApi">
+      
+          <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
+            <input message="tns:OaxApi_OasXmlRequest">
+          </input>
+            <output message="tns:OaxApi_OasXmlRequestResponse">
+          </output>
+          </operation>
+        </portType>
+        <binding name="OaxApiBinding" type="tns:OaxApi">
+          <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      
+          <operation name="OasXmlRequest">
+            <soap:operation soapAction=""/>
+            <input>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </input>
+            <output>
+              <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
+            </output>
+          </operation>
+      
+        </binding>
+        <service name="OaxApiService">
+          <port name="OaxApiPort" binding="tns:OaxApiBinding">
+            <soap:address location="https://training7.247realmedia.com:443/oasapi/OaxApi"/>
+          </port>
+        </service>
+      </definitions>
+
+    http_version: "1.1"
