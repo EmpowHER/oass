@@ -166,10 +166,12 @@ describe Oass::Client do
     end
 
     context "with a creative file" do
+      use_vcr_cassette :record => :once
+
       let(:attributes) do
         {
           :campaign_id => "random_id_lolwut",
-          :id => "I_am_so_creative_with_a_creative_lol",
+          :id => "creative_with_a_creative_lol",
           :name => "A nice name indeed",
           :description => "Blabla",
           :click_url => "http://lolwut.com",
