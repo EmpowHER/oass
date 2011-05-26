@@ -17,7 +17,7 @@ describe Oass::Client do
   end
 
   describe "#request" do
-    use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method, :body]
+    use_vcr_cassette
 
     let(:client) { Oass::Client.new }
 
@@ -49,7 +49,7 @@ describe Oass::Client do
   end
 
   describe "#read_campaign" do
-    use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method, :body]
+    use_vcr_cassette
 
     let(:client) { Oass::Client.new }
 
@@ -69,7 +69,7 @@ describe Oass::Client do
   end
 
   describe "#read_creative" do
-    use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method, :body]
+    use_vcr_cassette
 
     let(:client) { Oass::Client.new }
 
@@ -95,7 +95,7 @@ describe Oass::Client do
   end
 
   describe "#create_campaign" do
-    use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method, :body]
+    use_vcr_cassette
 
     let(:client) { Oass::Client.new }
 
@@ -119,7 +119,7 @@ describe Oass::Client do
   end
 
   describe "#create_criative" do
-    use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method, :body]
+    use_vcr_cassette
 
     let(:client) { Oass::Client.new }
 
