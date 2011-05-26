@@ -18,7 +18,7 @@ module Oass
 
   mattr_accessor :password
 
-  def configure
+  def self.configure
     yield self
   end
 end
