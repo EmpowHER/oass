@@ -26,10 +26,6 @@ You can create new resources by informing its properties as a hash in underscore
 
     client.create_campaign :id => "Campaign!", :description => "Oh hai!"
 
-To upload files (for example, the creative and component files) you don't need to worry about enconding stuff, just specify their paths, types and name
-
-    client.create_creative :creative_file => { :name => "trollface.png", :content_type => "image/png", :file => "/path/to/trollface.png" }
-
 You can also make requests that are not yet natively implemented
 
     client.request "Campaign" do |xml|
@@ -39,3 +35,8 @@ You can also make requests that are not yet natively implemented
         end
       end
     end
+
+### Uploading files
+To upload files (for example, the creative and component files) you don't need to worry about enconding stuff, just specify their paths, types and name
+
+    client.create_creative :creative_file => { :name => "trollface.png", :content_type => "image/png", :file => "/path/to/trollface.png" }
