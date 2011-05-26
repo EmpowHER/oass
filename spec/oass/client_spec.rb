@@ -116,6 +116,14 @@ describe Oass::Client do
 
       its(:content) { should == "Successfully added." }
     end
+
+    context "with invalid attributes" do
+      use_vcr_cassette "Invalid campaign movie"
+
+      it "raises an OasError" do
+        expect { client.create_campaign :invalid => true }.to raise_error(Oass::OASError)
+      end
+    end
   end
 
   describe "#create_creative" do
