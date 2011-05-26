@@ -1,3 +1,5 @@
+require 'base64'
+
 module Oass
   module Creative
     def read_creative(campaign_id, id)
@@ -43,6 +45,12 @@ module Oass
             end
           end
           xml.SequenceNo attributes[:sequence_number]
+          xml.File(:fileType => "creative",
+                   :contentType => attributes[:creative_file][:content_type],
+                   :fileName => attributes[:creative_file][:name],
+                   :encoding => "base64") do
+            xml.text Base64.encode64(File.open(attributes[:creative_file][:file]).read)
+          end if attributes[:creative_file]
         end
       end
     end

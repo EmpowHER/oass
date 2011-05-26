@@ -118,7 +118,7 @@ describe Oass::Client do
     end
   end
 
-  describe "#create_criative" do
+  describe "#create_creative" do
     use_vcr_cassette
 
     let(:client) { Oass::Client.new }
@@ -150,12 +150,50 @@ describe Oass::Client do
           :browser_versions => %w(explorer6 netscape7),
           :sequence_number => "4"
         }
-
       end
 
       subject { client.create_creative attributes }
 
       its(:content) { "Successfully added." }
+    end
+
+    context "with a creative file" do
+      let(:attributes) do
+        {
+          :campaign_id => "random_id_lolwut",
+          :id => "I_am_so_creative_with_a_creative",
+          :name => "A nice name indeed",
+          :description => "Blabla",
+          :click_url => "http://lolwut.com",
+          :positions => %w(TopLeft BottomLeft),
+          :creative_types_id => "unknow_type",
+          :redirect_url => "http://lolwut.com",
+          :display => "Y",
+          :height => "30",
+          :width => "30",
+          :target_window => "targetwindow",
+          :alt_text => "Oh hai!",
+          :discount_impressions => "N",
+          :start_date => "1986-03-31",
+          :end_date => "2040-03-31",
+          :weight => "79",
+          :expire_immediately => "N",
+          :no_cache => "N",
+          :extra_html => "<b></b>",
+          :extra_text => "kthxbai",
+          :browser_versions => %w(explorer6 netscape7),
+          :sequence_number => "4",
+          :creative_file => {
+            :name => "image.png",
+            :content_type => "image/png",
+            :file => File.join(File.dirname(__FILE__), "../fixtures/creative_file.png")
+          }
+        }
+      end
+
+      subject { client.create_creative attributes }
+
+      its(:content) { should == "Successfully added." }
     end
   end
 end
