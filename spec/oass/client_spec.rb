@@ -108,7 +108,7 @@ describe Oass::Client do
           :agency_id => "unknown_agency",
           :name => "LOLWUT",
           :campaign_manager => "lol",
-          :product_id => "default-product",
+          :product_id => "default-product"
         }
       end
 
