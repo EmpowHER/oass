@@ -29,6 +29,67 @@ module Oass
               xml.InternalQuickReport attributes[:internal_quick_report]
               xml.ExternalQuickReport attributes[:external_quick_report]
             end
+
+            if schedule = attributes[:schedule]
+              xml.Schedule do
+                xml.Impressions schedule[:impressions]
+                xml.Clicks schedule[:clicks]
+                xml.Uniques schedule[:uniques]
+                xml.Weight schedule[:weight]
+                xml.PriorityLevel schedule[:priority_level]
+                xml.Completion schedule[:completion]
+                xml.StartDate schedule[:start_date]
+                xml.EndDate schedule[:end_date]
+                xml.Reach schedule[:reach]
+                xml.DailyImp schedule[:daily_impressions]
+                xml.DailyClicks schedule[:daily_clicks]
+                xml.DailyUniq schedule[:daily_uniq]
+                xml.SmoothOrAsap schedule[:smooth_or_asap]
+                xml.ImpOverrun schedule[:impression_overrun]
+                xml.CompanionPositions do
+                  schedule[:companion_positions].each do |position|
+                    xml.CompanionPosition position
+                  end
+                end if schedule[:companion_positions]
+                xml.StrictCompanions schedule[:strict_companions]
+
+                # TODO check the primary and secondary frequency errors
+                if primary_frequency = schedule[:primary_frequency]
+                  xml.PrimaryFrequency do
+                    xml.ImpPerVisitor primary_frequency[:impression_per_visitor]
+                    xml.ClickPerVisitor primary_frequency[:click_per_visitor]
+                    xml.FreqScope primary_frequency[:frequency_scope]
+                  end
+                end
+
+                if secondary_frequency = schedule[:primary_frequency]
+                  xml.SecondaryFrequency do
+                    xml.ImpPerVisitor secondary_frequency[:impression_per_visitor]
+                    xml.FreqScope secondary_frequency[:frequency_scope]
+                  end
+                end
+
+                xml.HourOfDay do
+                  schedule[:hours_of_day].each do |hour|
+                    xml.Hour hour
+                  end
+                end if schedule[:hours_of_day]
+
+                xml.DayOfWeek do
+                  schedule[:days_of_week].each do |day|
+                    xml.Day day
+                  end
+                end if schedule[:days_of_week]
+
+                xml.UserTimeZone schedule[:user_time_zone]
+
+                xml.Sections do
+                  schedule[:sections].each do |section|
+                    xml.SectionId section
+                  end
+                end if schedule[:sections]
+              end
+            end
           end
         end
       end

@@ -102,13 +102,35 @@ describe Oass::Client do
     context "with the required attributes" do
       let(:attributes) do
         {
-          :id => "random_id_lolwut_wtf",
+          :id => "random_id_lolwut_wtf_shit",
           :name => "LOLWUT",
           :advertiser_id => "bobo",
           :agency_id => "unknown_agency",
           :name => "LOLWUT",
           :campaign_manager => "lol",
-          :product_id => "default-product"
+          :product_id => "default-product",
+          :schedule => {
+            :impressions => 999,
+            :clicks => 0,
+            :uniques => 0,
+            :weight => 10,
+            :priority_level => 1,
+            :completion => "E",
+            :start_date => "2005-12-01",
+            :end_date => "2040-12-01",
+            :reach => "O",
+            :daily_impressions => 99,
+            :daily_clicks => 9,
+            :daily_uniq => 1,
+            :smooth_or_asap => "S",
+            :impression_overrun => 2,
+            :companion_positions => %w(B/T BL/TL),
+            :strict_companions => "Y",
+            :hours_of_day => %w(00 01 23),
+            :days_of_week => %w(2 3 4 5),
+            :user_time_zone => "Y",
+            :sections => %w(SectionABC SectionDEF)
+          }
         }
       end
 

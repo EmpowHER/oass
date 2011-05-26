@@ -1,30 +1,30 @@
----
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
     method: :get
     uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
-    body:
-    headers:
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
       code: 200
       message: OK
-    headers:
-      etag:
+    headers: 
+      etag: 
       - "\"44e617-674-48c8d0448cd40\""
-      last-modified:
+      last-modified: 
       - Thu, 29 Jul 2010 20:59:57 GMT
-      p3p:
+      p3p: 
       - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
-      content-type:
+      content-type: 
       - text/xml
-      date:
+      date: 
       - Thu, 26 May 2011 00:57:00 GMT
-      server:
+      server: 
       - Apache/2.2.3 (Red Hat)
-      content-length:
+      content-length: 
       - "1652"
-      accept-ranges:
+      accept-ranges: 
       - bytes
     body: |
       <?xml version="1.0" encoding="UTF-8"?>
@@ -37,7 +37,7 @@
         </message>
         <message name="OaxApi_OasXmlRequest">
           <part name="String_1" type="xsd:string">
-
+      
           </part>
           <part name="String_2" type="xsd:string">
           </part>
@@ -47,7 +47,7 @@
           </part>
         </message>
         <portType name="OaxApi">
-
+      
           <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
             <input message="tns:OaxApi_OasXmlRequest">
           </input>
@@ -57,7 +57,7 @@
         </portType>
         <binding name="OaxApiBinding" type="tns:OaxApi">
           <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-
+      
           <operation name="OasXmlRequest">
             <soap:operation soapAction=""/>
             <input>
@@ -67,7 +67,7 @@
               <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
             </output>
           </operation>
-
+      
         </binding>
         <service name="OaxApiService">
           <port name="OaxApiPort" binding="tns:OaxApiBinding">
@@ -77,12 +77,12 @@
       </definitions>
 
     http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://training7.247realmedia.com:443/oasapi/OaxApi
     body: |-
-      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1><%= account %></String_1><String_2><%= username %></String_2><String_3><%= password %></String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
       &lt;AdXML&gt;
         &lt;Request type=&quot;Campaign&quot;&gt;
           &lt;Campaign action=&quot;add&quot;&gt;
@@ -101,65 +101,65 @@
         &lt;/Request&gt;
       &lt;/AdXML&gt;
       </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
-    headers:
-      soapaction:
+    headers: 
+      soapaction: 
       - "\"OasXmlRequest\""
-      content-type:
+      content-type: 
       - text/xml;charset=UTF-8
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
       code: 200
       message: OK
-    headers:
-      x-powered-by:
+    headers: 
+      x-powered-by: 
       - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
-      p3p:
+      p3p: 
       - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
-      via:
+      via: 
       - 1.1 training7.247realmedia.com
-      content-type:
+      content-type: 
       - text/xml;charset=UTF-8
-      date:
+      date: 
       - Thu, 26 May 2011 00:57:02 GMT
-      server:
+      server: 
       - Apache-Coyote/1.1
-      transfer-encoding:
+      transfer-encoding: 
       - chunked
     body: |-
       <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
       &lt;AdXML>
-
+      
       &lt;Response>
         &lt;Campaign>Successfully added.&lt;/Campaign>
       &lt;/Response>
       &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
     http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
     method: :get
     uri: https://training7.247realmedia.com:443//oasapi/OaxApi?wsdl
-    body:
-    headers:
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
       code: 200
       message: OK
-    headers:
-      etag:
+    headers: 
+      etag: 
       - "\"44e617-674-48c8d0448cd40\""
-      p3p:
+      p3p: 
       - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
-      last-modified:
+      last-modified: 
       - Thu, 29 Jul 2010 20:59:57 GMT
-      content-type:
+      content-type: 
       - text/xml
-      server:
+      server: 
       - Apache/2.2.3 (Red Hat)
-      date:
+      date: 
       - Thu, 26 May 2011 00:57:45 GMT
-      content-length:
+      content-length: 
       - "1652"
-      accept-ranges:
+      accept-ranges: 
       - bytes
     body: |
       <?xml version="1.0" encoding="UTF-8"?>
@@ -172,7 +172,7 @@
         </message>
         <message name="OaxApi_OasXmlRequest">
           <part name="String_1" type="xsd:string">
-
+      
           </part>
           <part name="String_2" type="xsd:string">
           </part>
@@ -182,7 +182,7 @@
           </part>
         </message>
         <portType name="OaxApi">
-
+      
           <operation name="OasXmlRequest" parameterOrder="String_1 String_2 String_3 String_4">
             <input message="tns:OaxApi_OasXmlRequest">
           </input>
@@ -192,7 +192,7 @@
         </portType>
         <binding name="OaxApiBinding" type="tns:OaxApi">
           <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-
+      
           <operation name="OasXmlRequest">
             <soap:operation soapAction=""/>
             <input>
@@ -202,7 +202,7 @@
               <soap:body use="literal" namespace="http://api.oas.tfsm.com/"/>
             </output>
           </operation>
-
+      
         </binding>
         <service name="OaxApiService">
           <port name="OaxApiPort" binding="tns:OaxApiBinding">
@@ -211,4 +211,1462 @@
         </service>
       </definitions>
 
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;random_id_lolwut_wtf&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;PrimaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;ClickPerVisitor&gt;0&lt;/ClickPerVisitor&gt;
+                &lt;FreqScore&gt;Y&lt;/FreqScore&gt;
+              &lt;/PrimaryFrequency&gt;
+              &lt;SecondaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;ClickPerVisitor&gt;0&lt;/ClickPerVisitor&gt;
+                &lt;FreqScore&gt;Y&lt;/FreqScore&gt;
+              &lt;/SecondaryFrequency&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      soapaction: 
+      - "\"OasXmlRequest\""
+      content-type: 
+      - text/xml;charset=UTF-8
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      via: 
+      - 1.1 training7.247realmedia.com
+      content-type: 
+      - text/xml;charset=UTF-8
+      date: 
+      - Thu, 26 May 2011 16:37:27 GMT
+      server: 
+      - Apache-Coyote/1.1
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      &lt;Response>
+        &lt;Exception errorCode='370'>&lt;![CDATA[
+      error in API request
+      line: 45
+      message: The content of element type "SecondaryFrequency" must match "(ImpPerVisitor?,FreqScope?)".
+      type: Parse Exception]]&gt;&lt;/Exception>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;random_id_lolwut_wtf&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;PrimaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;FreqScore&gt;Y&lt;/FreqScore&gt;
+                &lt;ClickPerVisitor&gt;0&lt;/ClickPerVisitor&gt;
+              &lt;/PrimaryFrequency&gt;
+              &lt;SecondaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;FreqScore&gt;Y&lt;/FreqScore&gt;
+                &lt;ClickPerVisitor&gt;0&lt;/ClickPerVisitor&gt;
+              &lt;/SecondaryFrequency&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      content-type: 
+      - text/xml;charset=UTF-8
+      soapaction: 
+      - "\"OasXmlRequest\""
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml;charset=UTF-8
+      via: 
+      - 1.1 training7.247realmedia.com
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Thu, 26 May 2011 16:38:16 GMT
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      &lt;Response>
+        &lt;Exception errorCode='370'>&lt;![CDATA[
+      error in API request
+      line: 45
+      message: The content of element type "SecondaryFrequency" must match "(ImpPerVisitor?,FreqScope?)".
+      type: Parse Exception]]&gt;&lt;/Exception>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;random_id_lolwut_wtf&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;PrimaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;FreqScore&gt;Y&lt;/FreqScore&gt;
+              &lt;/PrimaryFrequency&gt;
+              &lt;SecondaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;FreqScore&gt;Y&lt;/FreqScore&gt;
+              &lt;/SecondaryFrequency&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      soapaction: 
+      - "\"OasXmlRequest\""
+      content-type: 
+      - text/xml;charset=UTF-8
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      via: 
+      - 1.1 training7.247realmedia.com
+      content-type: 
+      - text/xml;charset=UTF-8
+      date: 
+      - Thu, 26 May 2011 16:38:44 GMT
+      server: 
+      - Apache-Coyote/1.1
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      &lt;Response>
+        &lt;Exception errorCode='370'>&lt;![CDATA[
+      error in API request
+      line: 43
+      message: The content of element type "SecondaryFrequency" must match "(ImpPerVisitor?,FreqScope?)".
+      type: Parse Exception]]&gt;&lt;/Exception>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;random_id_lolwut_wtf&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;PrimaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;ClickPerVisitor&gt;0&lt;/ClickPerVisitor&gt;
+                &lt;FreqScope&gt;Y&lt;/FreqScope&gt;
+              &lt;/PrimaryFrequency&gt;
+              &lt;SecondaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;ClickPerVisitor&gt;0&lt;/ClickPerVisitor&gt;
+                &lt;FreqScope&gt;Y&lt;/FreqScope&gt;
+              &lt;/SecondaryFrequency&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      content-type: 
+      - text/xml;charset=UTF-8
+      soapaction: 
+      - "\"OasXmlRequest\""
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml;charset=UTF-8
+      via: 
+      - 1.1 training7.247realmedia.com
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Thu, 26 May 2011 16:39:12 GMT
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      &lt;Response>
+        &lt;Exception errorCode='370'>&lt;![CDATA[
+      error in API request
+      line: 45
+      message: The content of element type "SecondaryFrequency" must match "(ImpPerVisitor?,FreqScope?)".
+      type: Parse Exception]]&gt;&lt;/Exception>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;random_id_lolwut_wtf&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;PrimaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;FreqScope&gt;Y&lt;/FreqScope&gt;
+              &lt;/PrimaryFrequency&gt;
+              &lt;SecondaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;FreqScope&gt;Y&lt;/FreqScope&gt;
+              &lt;/SecondaryFrequency&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      soapaction: 
+      - "\"OasXmlRequest\""
+      content-type: 
+      - text/xml;charset=UTF-8
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      via: 
+      - 1.1 training7.247realmedia.com
+      content-type: 
+      - text/xml;charset=UTF-8
+      date: 
+      - Thu, 26 May 2011 16:39:57 GMT
+      server: 
+      - Apache-Coyote/1.1
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      
+      &lt;Response>
+        &lt;Campaign>
+          &lt;Exception errorCode='502'>ClickPerVisitor must not be blank.&lt;/Exception>
+        &lt;/Campaign>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;random_id_lolwut_wtf&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;PrimaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;FreqScope&gt;Y&lt;/FreqScope&gt;
+                &lt;ClickPerVisitor&gt;0&lt;/ClickPerVisitor&gt;
+              &lt;/PrimaryFrequency&gt;
+              &lt;SecondaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;FreqScope&gt;Y&lt;/FreqScope&gt;
+                &lt;ClickPerVisitor&gt;0&lt;/ClickPerVisitor&gt;
+              &lt;/SecondaryFrequency&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      content-type: 
+      - text/xml;charset=UTF-8
+      soapaction: 
+      - "\"OasXmlRequest\""
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml;charset=UTF-8
+      via: 
+      - 1.1 training7.247realmedia.com
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Thu, 26 May 2011 16:40:25 GMT
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      &lt;Response>
+        &lt;Exception errorCode='370'>&lt;![CDATA[
+      error in API request
+      line: 45
+      message: The content of element type "SecondaryFrequency" must match "(ImpPerVisitor?,FreqScope?)".
+      type: Parse Exception]]&gt;&lt;/Exception>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;random_id_lolwut_wtf&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;PrimaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;FreqScope&gt;Y&lt;/FreqScope&gt;
+                &lt;ClickPerVisitor&gt;0&lt;/ClickPerVisitor&gt;
+              &lt;/PrimaryFrequency&gt;
+              &lt;SecondaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;FreqScope&gt;Y&lt;/FreqScope&gt;
+              &lt;/SecondaryFrequency&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      soapaction: 
+      - "\"OasXmlRequest\""
+      content-type: 
+      - text/xml;charset=UTF-8
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      via: 
+      - 1.1 training7.247realmedia.com
+      content-type: 
+      - text/xml;charset=UTF-8
+      date: 
+      - Thu, 26 May 2011 16:40:40 GMT
+      server: 
+      - Apache-Coyote/1.1
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      &lt;Response>
+        &lt;Exception errorCode='370'>&lt;![CDATA[
+      error in API request
+      line: 40
+      message: The content of element type "PrimaryFrequency" must match "(ImpPerVisitor?,ClickPerVisitor?,FreqScope?)".
+      type: Parse Exception]]&gt;&lt;/Exception>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;random_id_lolwut_wtf&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;PrimaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;ClickPerVisitor&gt;0&lt;/ClickPerVisitor&gt;
+                &lt;FreqScope&gt;Y&lt;/FreqScope&gt;
+              &lt;/PrimaryFrequency&gt;
+              &lt;SecondaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;FreqScope&gt;Y&lt;/FreqScope&gt;
+              &lt;/SecondaryFrequency&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      content-type: 
+      - text/xml;charset=UTF-8
+      soapaction: 
+      - "\"OasXmlRequest\""
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml;charset=UTF-8
+      via: 
+      - 1.1 training7.247realmedia.com
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Thu, 26 May 2011 16:41:05 GMT
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      
+      &lt;Response>
+        &lt;Campaign>
+          &lt;Exception errorCode='500'>Y is an invalid option for FreqScope (0,1,2,3,4,5,6)&lt;/Exception>
+        &lt;/Campaign>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;random_id_lolwut_wtf&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;PrimaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;ClickPerVisitor&gt;0&lt;/ClickPerVisitor&gt;
+                &lt;FreqScope&gt;1&lt;/FreqScope&gt;
+              &lt;/PrimaryFrequency&gt;
+              &lt;SecondaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;2&lt;/ImpPerVisitor&gt;
+                &lt;FreqScope&gt;1&lt;/FreqScope&gt;
+              &lt;/SecondaryFrequency&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      soapaction: 
+      - "\"OasXmlRequest\""
+      content-type: 
+      - text/xml;charset=UTF-8
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      via: 
+      - 1.1 training7.247realmedia.com
+      content-type: 
+      - text/xml;charset=UTF-8
+      date: 
+      - Thu, 26 May 2011 16:41:36 GMT
+      server: 
+      - Apache-Coyote/1.1
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      
+      &lt;Response>
+        &lt;Campaign>
+          &lt;Exception errorCode='590'>Primary and Secondary Frequency Scope must not be equivalent.&lt;/Exception>
+        &lt;/Campaign>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;random_id_lolwut_wtf&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;PrimaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;3&lt;/ImpPerVisitor&gt;
+                &lt;ClickPerVisitor&gt;0&lt;/ClickPerVisitor&gt;
+                &lt;FreqScope&gt;1&lt;/FreqScope&gt;
+              &lt;/PrimaryFrequency&gt;
+              &lt;SecondaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;3&lt;/ImpPerVisitor&gt;
+                &lt;FreqScope&gt;1&lt;/FreqScope&gt;
+              &lt;/SecondaryFrequency&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      content-type: 
+      - text/xml;charset=UTF-8
+      soapaction: 
+      - "\"OasXmlRequest\""
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml;charset=UTF-8
+      via: 
+      - 1.1 training7.247realmedia.com
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Thu, 26 May 2011 16:42:34 GMT
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      
+      &lt;Response>
+        &lt;Campaign>
+          &lt;Exception errorCode='590'>Primary and Secondary Frequency Scope must not be equivalent.&lt;/Exception>
+        &lt;/Campaign>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;random_id_lolwut_wtf&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;PrimaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;3&lt;/ImpPerVisitor&gt;
+                &lt;ClickPerVisitor&gt;0&lt;/ClickPerVisitor&gt;
+                &lt;FreqScope&gt;4&lt;/FreqScope&gt;
+              &lt;/PrimaryFrequency&gt;
+              &lt;SecondaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;3&lt;/ImpPerVisitor&gt;
+                &lt;FreqScope&gt;4&lt;/FreqScope&gt;
+              &lt;/SecondaryFrequency&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      soapaction: 
+      - "\"OasXmlRequest\""
+      content-type: 
+      - text/xml;charset=UTF-8
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      via: 
+      - 1.1 training7.247realmedia.com
+      content-type: 
+      - text/xml;charset=UTF-8
+      date: 
+      - Thu, 26 May 2011 16:43:17 GMT
+      server: 
+      - Apache-Coyote/1.1
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      
+      &lt;Response>
+        &lt;Campaign>
+          &lt;Exception errorCode='590'>Primary and Secondary Frequency Scope must not be equivalent.&lt;/Exception>
+        &lt;/Campaign>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;random_id_lolwut_wtf&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;PrimaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;4&lt;/ImpPerVisitor&gt;
+                &lt;ClickPerVisitor&gt;0&lt;/ClickPerVisitor&gt;
+                &lt;FreqScope&gt;4&lt;/FreqScope&gt;
+              &lt;/PrimaryFrequency&gt;
+              &lt;SecondaryFrequency&gt;
+                &lt;ImpPerVisitor&gt;4&lt;/ImpPerVisitor&gt;
+                &lt;FreqScope&gt;4&lt;/FreqScope&gt;
+              &lt;/SecondaryFrequency&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      content-type: 
+      - text/xml;charset=UTF-8
+      soapaction: 
+      - "\"OasXmlRequest\""
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml;charset=UTF-8
+      via: 
+      - 1.1 training7.247realmedia.com
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Thu, 26 May 2011 16:44:05 GMT
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      
+      &lt;Response>
+        &lt;Campaign>
+          &lt;Exception errorCode='590'>Primary and Secondary Frequency Scope must not be equivalent.&lt;/Exception>
+        &lt;/Campaign>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;random_id_lolwut_wtf&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      soapaction: 
+      - "\"OasXmlRequest\""
+      content-type: 
+      - text/xml;charset=UTF-8
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      via: 
+      - 1.1 training7.247realmedia.com
+      content-type: 
+      - text/xml;charset=UTF-8
+      date: 
+      - Thu, 26 May 2011 16:44:26 GMT
+      server: 
+      - Apache-Coyote/1.1
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      
+      &lt;Response>
+        &lt;Campaign>
+          &lt;Exception errorCode='512'>Campaign ID already exists in Open AdStream.&lt;/Exception>
+        &lt;/Campaign>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;random_id_lolwut_wtf_shit&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      content-type: 
+      - text/xml;charset=UTF-8
+      soapaction: 
+      - "\"OasXmlRequest\""
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml;charset=UTF-8
+      via: 
+      - 1.1 training7.247realmedia.com
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Thu, 26 May 2011 16:44:43 GMT
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      
+      &lt;Response>
+        &lt;Campaign>Successfully added.&lt;/Campaign>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
     http_version: "1.1"
