@@ -6,6 +6,14 @@ describe Oass do
       it "allows configuration for #{setting}" do
         expect { Oass.send("#{setting}=", "LOL") }.to change { Oass.send(setting) }.to("LOL")
       end
+
+      it "provides #{setting} in the configuration block" do
+        expect {
+          Oass.configure { |config|
+            config.send("#{setting}=", "WUT")
+          }
+        }.to change { Oass.send(setting) }.to("WUT")
+      end
     end
   end
 end
