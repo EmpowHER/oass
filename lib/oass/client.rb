@@ -1,9 +1,12 @@
 module Oass
   class Client
-    attr_accessor :endpoint, :account, :username, :password
+    autoload :Campaign, "oass/client/campaign"
+    autoload :Creative, "oass/client/creative"
 
     include Campaign
     include Creative
+
+    attr_accessor :endpoint, :account, :username, :password
 
     def initialize(options = {})
       options.reverse_merge! :endpoint => Oass.endpoint,

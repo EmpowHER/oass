@@ -5,8 +5,6 @@ require 'oass/errors'
 
 module Oass
   autoload :Client, "oass/client"
-  autoload :Campaign, "oass/campaign"
-  autoload :Creative, "oass/creative"
 
   mattr_accessor :endpoint
   @@endpoint = "https://training7.247realmedia.com//oasapi/OaxApi?wsdl"
