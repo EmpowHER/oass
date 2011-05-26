@@ -1,10 +1,10 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :post
     uri: https://training7.247realmedia.com:443/oasapi/OaxApi
     body: |-
-      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1><%= account %></String_1><String_2><%= username %></String_2><String_3><%= password %></String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
       &lt;AdXML&gt;
         &lt;Request type=&quot;Creative&quot;&gt;
           &lt;Creative action=&quot;add&quot;&gt;
@@ -33,34 +33,34 @@
         &lt;/Request&gt;
       &lt;/AdXML&gt;
       </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
-    headers: 
-      content-type: 
+    headers:
+      content-type:
       - text/xml;charset=UTF-8
-      soapaction: 
+      soapaction:
       - "\"OasXmlRequest\""
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      x-powered-by: 
+    headers:
+      x-powered-by:
       - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
-      p3p: 
+      p3p:
       - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
-      content-type: 
+      content-type:
       - text/xml;charset=UTF-8
-      via: 
+      via:
       - 1.1 training7.247realmedia.com
-      server: 
+      server:
       - Apache-Coyote/1.1
-      date: 
+      date:
       - Thu, 26 May 2011 01:25:50 GMT
-      transfer-encoding: 
+      transfer-encoding:
       - chunked
     body: |-
       <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
       &lt;AdXML>
-      
+
       &lt;Response>
         &lt;Creative>
           &lt;Exception errorCode='502'>CampaignId must not be blank.&lt;/Exception>
