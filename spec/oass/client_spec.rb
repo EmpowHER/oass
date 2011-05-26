@@ -195,5 +195,13 @@ describe Oass::Client do
 
       its(:content) { should == "Successfully added." }
     end
+
+    context "with invalid attributes" do
+      use_vcr_cassette "Invalid creative movie"
+
+      it "raises an OasError" do
+        expect { client.create_creative :invalid => true }.to raise_error(Oass::OASError)
+      end
+    end
   end
 end

@@ -23,7 +23,7 @@ module Oass
             attributes[:positions].each do |position|
               xml.Position position
             end
-          end
+          end if attributes[:positions]
           xml.CreativeTypesId attributes[:creative_types_id]
           xml.RedirectUrl attributes[:redirect_url]
           xml.Display attributes[:display]
@@ -43,7 +43,7 @@ module Oass
             attributes[:browser_versions].each do |version|
               xml.Code version
             end
-          end
+          end if attributes[:browser_versions]
           xml.SequenceNo attributes[:sequence_number]
           xml.File(:fileType => "creative",
                    :contentType => attributes[:creative_file][:content_type],
