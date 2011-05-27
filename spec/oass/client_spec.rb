@@ -99,16 +99,43 @@ describe Oass::Client do
 
     let(:client) { Oass::Client.new }
 
-    context "with the required attributes" do
+    context "with just the required attributes" do
       let(:attributes) do
         {
-          :id => "random_id_lolwut_wtf_shit",
+          :id => ("a".."z").to_a.shuffle.join,
+          :name => "LOLWUT",
+          :advertiser_id => "bobo",
+          :agency_id => "unknown_agency",
+          :product_id => "default-product",
+          :schedule => {
+            :impressions => 999,
+            :clicks => 0,
+            :completion => "S",
+            :priority_level => 1,
+            :reach => "O",
+            :smooth_or_asap => "S",
+          }
+        }
+      end
+
+      subject { client.create_campaign attributes }
+
+      its(:content) { should == "Successfully added." }
+    end
+
+    context "with valid attributes" do
+      let(:attributes) do
+        {
+          :id => ("a".."z").to_a.shuffle.join,
           :name => "LOLWUT",
           :advertiser_id => "bobo",
           :agency_id => "unknown_agency",
           :name => "LOLWUT",
           :campaign_manager => "lol",
           :product_id => "default-product",
+          :description => "lolwut",
+          :internal_quick_report => "short",
+          :external_quick_report => "short",
           :schedule => {
             :impressions => 999,
             :clicks => 0,

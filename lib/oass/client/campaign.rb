@@ -18,40 +18,40 @@ module Oass
               xml.AdvertiserId attributes[:advertiser_id]
               xml.Name attributes[:name]
               xml.AgencyId attributes[:agency_id]
-              xml.Description attributes[:description]
-              xml.CampaignManager attributes[:campaign_manager]
+              xml.Description attributes[:description] if attributes[:description]
+              xml.CampaignManager attributes[:campaign_manager] if attributes[:campaign_manager]
               xml.ProductId attributes[:product_id]
               xml.ExternalUsers do
                 attributes[:external_users].each do |user_id|
                   xml.UserId user_id
                 end
               end if attributes[:external_users]
-              xml.InternalQuickReport attributes[:internal_quick_report]
-              xml.ExternalQuickReport attributes[:external_quick_report]
+              xml.InternalQuickReport attributes[:internal_quick_report] if attributes[:internal_quick_report]
+              xml.ExternalQuickReport attributes[:external_quick_report] if attributes[:external_quick_report]
             end
 
             if schedule = attributes[:schedule]
               xml.Schedule do
-                xml.Impressions schedule[:impressions]
-                xml.Clicks schedule[:clicks]
-                xml.Uniques schedule[:uniques]
-                xml.Weight schedule[:weight]
-                xml.PriorityLevel schedule[:priority_level]
-                xml.Completion schedule[:completion]
-                xml.StartDate schedule[:start_date]
-                xml.EndDate schedule[:end_date]
-                xml.Reach schedule[:reach]
-                xml.DailyImp schedule[:daily_impressions]
-                xml.DailyClicks schedule[:daily_clicks]
-                xml.DailyUniq schedule[:daily_uniq]
-                xml.SmoothOrAsap schedule[:smooth_or_asap]
-                xml.ImpOverrun schedule[:impression_overrun]
+                xml.Impressions schedule[:impressions] if schedule[:impressions]
+                xml.Clicks schedule[:clicks] if schedule[:clicks]
+                xml.Uniques schedule[:uniques] if schedule[:uniques]
+                xml.Weight schedule[:weight] if schedule[:weight]
+                xml.PriorityLevel schedule[:priority_level] if schedule[:priority_level]
+                xml.Completion schedule[:completion] if schedule[:completion]
+                xml.StartDate schedule[:start_date] if schedule[:start_date]
+                xml.EndDate schedule[:end_date] if schedule[:end_date]
+                xml.Reach schedule[:reach] if schedule[:reach]
+                xml.DailyImp schedule[:daily_impressions] if schedule[:daily_impressions]
+                xml.DailyClicks schedule[:daily_clicks] if schedule[:daily_clicks]
+                xml.DailyUniq schedule[:daily_uniq] if schedule[:daily_uniq]
+                xml.SmoothOrAsap schedule[:smooth_or_asap] if schedule[:smooth_or_asap]
+                xml.ImpOverrun schedule[:impression_overrun] if schedule[:impression_overrun]
                 xml.CompanionPositions do
                   schedule[:companion_positions].each do |position|
                     xml.CompanionPosition position
                   end
                 end if schedule[:companion_positions]
-                xml.StrictCompanions schedule[:strict_companions]
+                xml.StrictCompanions schedule[:strict_companions] if schedule[:strict_companions]
 
                 # TODO check the primary and secondary frequency errors
                 if primary_frequency = schedule[:primary_frequency]
@@ -81,7 +81,7 @@ module Oass
                   end
                 end if schedule[:days_of_week]
 
-                xml.UserTimeZone schedule[:user_time_zone]
+                xml.UserTimeZone schedule[:user_time_zone] if schedule[:user_time_zone]
 
                 xml.Sections do
                   schedule[:sections].each do |section|
