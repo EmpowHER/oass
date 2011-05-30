@@ -90,6 +90,14 @@ module Oass
                 end if schedule[:sections]
               end
             end
+
+            if pages = attributes[:pages]
+              xml.Pages do
+                pages.each do |page|
+                  xml.Url page
+                end
+              end
+            end
           end
         end
       end
