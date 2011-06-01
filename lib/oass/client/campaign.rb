@@ -10,17 +10,28 @@ module Oass
       end
 
       def create_campaign(attributes)
+        create_or_update_campaign("add", attributes)
+      end
+
+      def update_campaign(attributes)
+        create_or_update_campaign("update", attributes)
+      end
+
+      private
+
+      def create_or_update_campaign(action, attributes)
         request "Campaign" do |xml|
-          xml.Campaign(:action => "add") do
+          xml.Campaign(:action => action) do
             xml.Overview do
               # Yeah... the attributes must be in the right order =/
               xml.Id attributes[:id]
-              xml.AdvertiserId attributes[:advertiser_id]
-              xml.Name attributes[:name]
-              xml.AgencyId attributes[:agency_id]
+              xml.AdvertiserId attributes[:advertiser_id] if attributes[:advertiser_id]
+              xml.Name attributes[:name] if attributes[:name]
+              xml.AgencyId attributes[:agency_id] if attributes[:agency_id]
               xml.Description attributes[:description] if attributes[:description]
               xml.CampaignManager attributes[:campaign_manager] if attributes[:campaign_manager]
               xml.ProductId attributes[:product_id]
+              xml.Status attributes[:status] if attributes[:status]
               xml.ExternalUsers do
                 attributes[:external_users].each do |user_id|
                   xml.UserId user_id
@@ -102,5 +113,6 @@ module Oass
         end
       end
     end
+
   end
 end
