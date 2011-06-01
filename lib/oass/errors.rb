@@ -1,9 +1,9 @@
 module Oass
   class OASError < StandardError
-    attr_accessor :code
+    attr_reader :code
 
     def initialize(message, options = {})
-      super(message)
+      super message
       @code = options[:code]
     end
   end
