@@ -51,11 +51,14 @@ module Oass
     def raise_errors(response)
       return if (error = response.css("Exception")).empty?
 
-      case error.attribute("errorCode").value.to_i
+      code    = error.attribute("errorCode").value.to_i
+      message = error.first.content
+
+      case code
         when 545
-          raise Oass::NotFoundError.new error.first.content
+          raise Oass::NotFoundError.new message, :code => code
         else
-          raise Oass::OASError.new error.first.content
+          raise Oass::OASError.new message, :code => code
         end
     end
   end
