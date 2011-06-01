@@ -19,4 +19,15 @@ module Oass
   def self.configure
     yield self
   end
+
+  class << self
+
+    def method_missing(method, *args, &block)
+      client.send(method, *args, &block)
+    end
+
+    def client
+      @client ||= Client.new
+    end
+  end
 end
