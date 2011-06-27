@@ -54,6 +54,14 @@ module Oass
                 xml.text Base64.encode64(File.open(attributes[:creative_file][:file]).read)
               end
             end
+            if attributes[:component_file]
+              xml.File(:fileType => "component",
+                       :contentType => attributes[:component_file][:content_type],
+                       :fileName => attributes[:component_file][:name],
+                       :encoding => "base64") do
+                xml.text Base64.encode64(File.open(attributes[:component_file][:file]).read)
+              end
+            end
           end
         end
       end

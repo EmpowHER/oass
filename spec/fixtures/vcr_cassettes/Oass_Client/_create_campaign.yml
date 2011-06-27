@@ -2591,3 +2591,158 @@
       &lt;/Response>
       &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
     http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;avnrfptzkoudjmlehiwbgsycqx&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;S&lt;/Completion&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      soapaction: 
+      - "\"OasXmlRequest\""
+      content-type: 
+      - text/xml;charset=UTF-8
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      via: 
+      - 1.1 training7.247realmedia.com
+      content-type: 
+      - text/xml;charset=UTF-8
+      date: 
+      - Mon, 27 Jun 2011 14:37:55 GMT
+      server: 
+      - Apache-Coyote/1.1
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      
+      &lt;Response>
+        &lt;Campaign>Successfully added.&lt;/Campaign>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://training7.247realmedia.com:443/oasapi/OaxApi
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:n1="http://api.oas.tfsm.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><n1:OasXmlRequest xmlns:n1="http://api.oas.tfsm.com/"><String_1>Abril</String_1><String_2>dev_abril</String_2><String_3>d3v@p1SgpD</String_3><String_4>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      &lt;AdXML&gt;
+        &lt;Request type=&quot;Campaign&quot;&gt;
+          &lt;Campaign action=&quot;add&quot;&gt;
+            &lt;Overview&gt;
+              &lt;Id&gt;swxqvbokzthgapncijdyefrulm&lt;/Id&gt;
+              &lt;AdvertiserId&gt;bobo&lt;/AdvertiserId&gt;
+              &lt;Name&gt;LOLWUT&lt;/Name&gt;
+              &lt;AgencyId&gt;unknown_agency&lt;/AgencyId&gt;
+              &lt;Description&gt;lolwut&lt;/Description&gt;
+              &lt;CampaignManager&gt;lol&lt;/CampaignManager&gt;
+              &lt;ProductId&gt;default-product&lt;/ProductId&gt;
+              &lt;InternalQuickReport&gt;short&lt;/InternalQuickReport&gt;
+              &lt;ExternalQuickReport&gt;short&lt;/ExternalQuickReport&gt;
+            &lt;/Overview&gt;
+            &lt;Schedule&gt;
+              &lt;Impressions&gt;999&lt;/Impressions&gt;
+              &lt;Clicks&gt;0&lt;/Clicks&gt;
+              &lt;Uniques&gt;0&lt;/Uniques&gt;
+              &lt;Weight&gt;10&lt;/Weight&gt;
+              &lt;PriorityLevel&gt;1&lt;/PriorityLevel&gt;
+              &lt;Completion&gt;E&lt;/Completion&gt;
+              &lt;StartDate&gt;2005-12-01&lt;/StartDate&gt;
+              &lt;EndDate&gt;2040-12-01&lt;/EndDate&gt;
+              &lt;Reach&gt;O&lt;/Reach&gt;
+              &lt;DailyImp&gt;99&lt;/DailyImp&gt;
+              &lt;DailyClicks&gt;9&lt;/DailyClicks&gt;
+              &lt;DailyUniq&gt;1&lt;/DailyUniq&gt;
+              &lt;SmoothOrAsap&gt;S&lt;/SmoothOrAsap&gt;
+              &lt;ImpOverrun&gt;2&lt;/ImpOverrun&gt;
+              &lt;CompanionPositions&gt;
+                &lt;CompanionPosition&gt;B/T&lt;/CompanionPosition&gt;
+                &lt;CompanionPosition&gt;BL/TL&lt;/CompanionPosition&gt;
+              &lt;/CompanionPositions&gt;
+              &lt;StrictCompanions&gt;Y&lt;/StrictCompanions&gt;
+              &lt;HourOfDay&gt;
+                &lt;Hour&gt;00&lt;/Hour&gt;
+                &lt;Hour&gt;01&lt;/Hour&gt;
+                &lt;Hour&gt;23&lt;/Hour&gt;
+              &lt;/HourOfDay&gt;
+              &lt;DayOfWeek&gt;
+                &lt;Day&gt;2&lt;/Day&gt;
+                &lt;Day&gt;3&lt;/Day&gt;
+                &lt;Day&gt;4&lt;/Day&gt;
+                &lt;Day&gt;5&lt;/Day&gt;
+              &lt;/DayOfWeek&gt;
+              &lt;UserTimeZone&gt;Y&lt;/UserTimeZone&gt;
+              &lt;Sections&gt;
+                &lt;SectionId&gt;SectionABC&lt;/SectionId&gt;
+                &lt;SectionId&gt;SectionDEF&lt;/SectionId&gt;
+              &lt;/Sections&gt;
+            &lt;/Schedule&gt;
+          &lt;/Campaign&gt;
+        &lt;/Request&gt;
+      &lt;/AdXML&gt;
+      </String_4></n1:OasXmlRequest></env:Body></env:Envelope>
+    headers: 
+      content-type: 
+      - text/xml;charset=UTF-8
+      soapaction: 
+      - "\"OasXmlRequest\""
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      p3p: 
+      - CP="NON NID PSAa PSDa OUR IND UNI COM NAV STA",policyref="/w3c/p3p.xml"
+      content-type: 
+      - text/xml;charset=UTF-8
+      via: 
+      - 1.1 training7.247realmedia.com
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Mon, 27 Jun 2011 14:37:59 GMT
+      transfer-encoding: 
+      - chunked
+    body: |-
+      <?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns1:OasXmlRequestResponse xmlns:ns1="http://api.oas.tfsm.com/"><result>&lt;?xml version='1.0'?>
+      &lt;AdXML>
+      
+      &lt;Response>
+        &lt;Campaign>Successfully added.&lt;/Campaign>
+      &lt;/Response>
+      &lt;/AdXML></result></ns1:OasXmlRequestResponse></soapenv:Body></soapenv:Envelope>
+    http_version: "1.1"
